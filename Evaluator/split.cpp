@@ -13,16 +13,29 @@ int main(){
     int n,i;
     
     ifstream ans("student/answer.txt");
-    cout<<"Please enter the question:\n";
-    getline(cin,s);
-    qn<<s<<"\n";
-    cout<<"Please enter the answer:\n";
-    ofstream answer("teacher/answer"+str(i+1)+".txt");
-    getline(cin,s);
-    answer<<s<<"\n";
-    cout<<"Please enter the marks for this question:\n";
-    getline(cin,s);
-    ofstream marks("teacher/marks"+str(i+1)+".txt");
-    marks<<s<<"\n";
-    
+    int cur=0,precur=-1;
+    ofstream writing("student/answer"+str(cur)+".txt");
+    while(getline(ans,s)){
+        
+        if(s[0]>='1'&&s[0]<='9'){
+            // cout<<s<<'\n';
+            cur=s[0]-'0'-1;
+            f(i,s.length()){
+                if(!((s[i]>='1'&&s[i]<='9')||s[i]==' '))
+                    break;
+            }
+            while(s[i]==' '){
+                i++;
+                if(i==s.length())break;
+            }
+            s=s.substr(i+1,s.length()-1-i);
+            // cout<<s<<'\n';
+        }
+        if(cur!=precur){
+            writing.close();
+            writing.open("student/answer"+str(cur)+".txt",std::ofstream::out |std::ofstream::trunc);
+        }
+        precur=cur;
+        writing<<s<<'\n';
+    }
 }

@@ -13,4 +13,3 @@ f= open("Evaluator/student/answer"+".txt")
 
 for line in f.readlines():
     print (line)
-os.system("cd Evaluator && ./set_questions")
