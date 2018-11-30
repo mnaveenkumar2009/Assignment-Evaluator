@@ -1,0 +1,5 @@
+For tesseract:
+    g++ testing.cpp -llept -ltesseract
+
+For opencv:
+    g++ -ggdb facedetect.cpp -o facedetect `pkg-config --cflags --libs opencv`
