@@ -11,7 +11,10 @@ string str(ll i){
 
 int main(){
     string s;
-    ifstream question("teacher/questions.txt");
-    ifstream answer("student/answer.txt")l
-    cout<<"The student obtained "<<ans<<"marks\n";
+    ifstream noq("teacher/noq.txt");
+    int n,i;
+    noq>>n;
+    f(i,n){
+        
+    }
 }

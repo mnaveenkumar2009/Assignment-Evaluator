@@ -1,1 +1,4 @@
-1
+) Dog
+2 ) A Computer system modelled on the
+human brain
+3 ) Bogota
