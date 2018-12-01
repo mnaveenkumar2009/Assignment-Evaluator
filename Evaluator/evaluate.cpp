@@ -53,7 +53,7 @@ int main(){
         }
         // cout<<match<<'\n';
         // cout<<abcd.size()<<'\n';
-        if((ld)match/(ld)abcd.size()>0.5){
+        if((ld)match/(ld)abcd.size()>=0.5){
             total+=marki;
         }
     }
